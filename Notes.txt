@@ -1,0 +1,144 @@
+﻿ The Resouce Links Are At The Bottom Of This File.
+
+ NOTE: The most important part is learning as much as I can. Also, the some important parts are
+ Developing accoring to
+ - Best Practices
+ - Efficiency
+ - Scalability
+ - Reusability
+ - Clean Code
+ Principles.
+
+ The Required Models For This Project;
+ (Finished)
+ 01. Book (To Store The Book's Data)           
+ - BookId
+ - PublisherId
+ - CategoryId
+ - Title
+ - Description
+ - PageNumber
+ - PublishedYear
+ - Language
+ - CopiesAvailable
+ - ISBN
+
+ (Finished) 
+ 02. Category (To Store The Category's Data, Having Relation With Book)      
+ - CategoryId
+ - Name
+
+ (Finished)
+ 03. Author (To Store The Author's Data, Having Relation With Book)         
+ - AuthorId
+ - FirstName
+ - LastName
+ - Description
+ - BirthDate
+ - BookAuthors
+
+ (Finished) (Note: We can also separate as publisher and BookPublisher)
+ 04. Publisher (To Store The Publisher's Data, Having Relation With Books)    
+ - PublisherId
+ - Name
+ - Address
+ - PhoneNumber
+ - Books
+
+ (Finished)
+ 05. Member (To Store The Member's Data)         
+ - MemberId
+ - FirstName
+ - LastName
+ - Email
+ - PhoneNumber
+ - MembershipDate
+
+ (Finished)
+ 06. MemberAddress (To Store The Member's Address Data, Having Relation With Members)  
+ - MemberAddressId
+ - Street
+ - City
+ - State
+ - PostalCode
+ - Country
+ - MemberId
+ - Member
+
+ (Finished)
+ 07. Employee (To Store The Employee's Data)      
+ - EmployeeId
+ - FirstName
+ - LastName
+ - Position
+ - HireDate
+ - DepartmentId
+ - Department
+
+ (Finished)
+ 08. Department (To Store The Employee's Department Data, Having Relation With Employee)    
+ - DepartmentId
+ - Name
+ - Description
+
+ (Finished)
+ 09. Reservation (To Store The Reservation's Of Books info, Having Relation With Members and Books)   
+ - ReservationId
+ - ReservationDate
+ - CancellationDate
+ - BookId
+ - MemberId
+
+ (Finished)
+ 10. BorrowedBook (To Store The Borrowed Book's Info, Having Relation With Books And Members)          
+ - BorrowedId
+ - MemberId
+ - BookId
+ - EmployeeId
+ - BorrowedDate
+ - DueDate
+ - ReturnDate
+ - LateFee
+
+ (Finished)
+ 11. BookAuthor (To Store The Books And Authors Relation)    
+ - BookId
+ - AuthorId
+ - Book
+ - Author
+
+ (Finished)
+ 12. Library (To Store The Name of Library Which Is The Same Library System But Different Locations)      
+ - LibraryId
+ - Name
+ - Address
+
+ 13. FeeOfLateBook  (In BOrrowedBook)
+
+
+ NOTES: 
+ - Attributes for Validation: Used [Required], [Range], and custom error messages to apply validation rules directly to properties.
+ - Constructor: Kept the constructor to initialize the collections and set the properties.
+ - Hierarchical Data Management: If you need to maintain separate catalogs, staff, and memberships for different locations,
+ a Library class helps to encapsulate these relationships.
+ - [Required]: Ensures that BookId and AuthorId properties are mandatory.
+ - [StringLength]: Restricts the length of the Name and Description properties.
+ - [Range]: Ensures that numerical properties fall within a specified range.
+
+
+ The Links of My Resources I Have Used So Far;
+
+ 1. Tutorial: Create a complex data model - ASP.NET MVC with EF Core:
+ Link: https:learn.microsoft.com/en-us/aspnet/core/data/ef-mvc/complex-data-model?view=aspnetcore-5.0#data-annotations
+
+ 2. Creating and Configuring a Model:
+ Link: https:learn.microsoft.com/en-us/ef/core/modeling/#use-fluent-api-to-configure-a-model
+
+ 3. Entity Framework Core: (Overview)
+ Link: https:learn.microsoft.com/en-us/ef/core/
+
+ 4. Code First Data Annotations
+ Link: https:learn.microsoft.com/en-us/ef/ef6/modeling/code-first/data-annotations
+
+ 5.Introduction to relationships
+ Link: https:learn.microsoft.com/en-us/ef/core/modeling/relationships
