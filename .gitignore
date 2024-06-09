@@ -1,0 +1,11 @@
+# Ignore project and solution files
+LibrarySystem.csproj
+LibrarySystem.csproj.user
+LibrarySystem.sln
+
+# Ignore bin and obj directories
+bin/
+obj/
+
+# Ignore all files in Debug directory for net6.0
+bin/Debug/net6.0/
